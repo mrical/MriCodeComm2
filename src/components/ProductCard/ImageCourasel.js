@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination } from "swiper";
 import { Image } from "cloudinary-react";
-const CLOUDINARY_REGEX = /^.+\.cloudinary\.com\/(?:[^\/]+\/)(?:(image|video)\/)?(?:(upload|fetch)\/)?(?:(?:[^_/]+_[^,/]+,?)*\/)?(?:v(\d+|\w{1,2})\/)?([^\.^\s]+)(?:\.(.+))?$/;
+import { CLOUDINARY_REGEX } from "../../helpers/cloudinaryRegex";
+
 SwiperCore.use([Pagination]);
 export default function ImageCourasel({ imageUrls, cardWidth }) {
   const [matches, setMatches] = useState(

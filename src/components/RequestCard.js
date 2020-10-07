@@ -24,6 +24,9 @@ import { Button } from "@material-ui/core";
 import useAuth from "../hooks/useAuth";
 import SizeBox from "./SizeBox";
 import Checkout from "./Checkout";
+import { Image } from "cloudinary-react";
+import { CLOUDINARY_REGEX } from "../helpers/cloudinaryRegex";
+
 const validationSchema = Yup.object().shape({
   message: Yup.string().required("Please provide a message"),
 });
@@ -162,11 +165,15 @@ export default function RequestCard({
               </div>
             </div>
             <div className="col-span-2">
-              <img
+              <Image
+                cloudName={process.env.NEXT_PUBLIC_CLOUDINARY_NAME}
                 className="w-full overflow-hidden rounded-md"
-                src={imageUrls[0]}
-                alt={title}
-              />
+                dpr="auto"
+                responsive
+                width="auto"
+                crop="scale"
+                publicId={CLOUDINARY_REGEX.exec(imageUrls[0])[4]}
+              ></Image>
             </div>
           </div>
 

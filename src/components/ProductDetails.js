@@ -13,7 +13,7 @@ import { signIn } from "next-auth/client";
 import { allSizes } from "../helpers/sizes";
 import { Image } from "cloudinary-react";
 SwiperCore.use([Pagination, Navigation, Thumbs]);
-const CLOUDINARY_REGEX = /^.+\.cloudinary\.com\/(?:[^\/]+\/)(?:(image|video)\/)?(?:(upload|fetch)\/)?(?:(?:[^_/]+_[^,/]+,?)*\/)?(?:v(\d+|\w{1,2})\/)?([^\.^\s]+)(?:\.(.+))?$/;
+import { CLOUDINARY_REGEX } from "../helpers/cloudinaryRegex";
 export default function ProductDetails({
   imageUrls,
   title,
