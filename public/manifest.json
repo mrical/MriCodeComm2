@@ -1,0 +1,43 @@
+{
+  "short_name": "MriCode",
+  "name": "MriCodeComm",
+  "description": "Ecomm web app developed by MriCode",
+  "icons": [
+    {
+      "src": "/favicons/android-chrome-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/favicons/android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/favicons/favicon-16x16.png",
+      "type": "image/png",
+      "sizes": "16x16"
+    },
+    {
+      "src": "/favicons/favicon-32x32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#DC85FF",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#FFD22E",
+  "shortcuts": [
+    {
+      "name": "Admin",
+      "short_name": "MriCode",
+      "description": "Ecomm web app developed by MriCode",
+      "url": "/admin",
+      "icons": [
+        { "src": "/favicons/android-chrome-192x192.png", "sizes": "192x192" }
+      ]
+    }
+  ]
+}

@@ -8,8 +8,31 @@
     "start": "next start"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.56",
+    "@stripe/stripe-js": "^1.9.0",
+    "axios": "^0.20.0",
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^1.23.0",
+    "cloudinary-react": "^1.6.7",
+    "formik": "^2.1.7",
+    "lodash": "^4.17.20",
+    "moment": "^2.29.1",
+    "mongodb": "^3.6.2",
+    "mongoose": "^5.10.8",
     "next": "9.5.3",
+    "next-auth": "^3.1.0",
+    "next-pwa": "^3.1.5",
+    "nodemailer": "^6.4.13",
+    "nookies": "^2.4.0",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "react-loading-skeleton": "^2.1.1",
+    "sass": "^1.26.12",
+    "stripe": "^8.107.0",
+    "swiper": "^6.3.2",
+    "tailwindcss": "^1.8.11",
+    "yup": "^0.29.3"
   }
 }
