@@ -69,11 +69,6 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
           <meta content="en_US" property="og:locale" />
-          <meta content="MriCodecomm" property="og:title" />
-          <meta
-            content="Hey, lets have a look at ecomm web app build by MriCode"
-            property="og:description"
-          />
           <meta content="5e41b2275db646a5" name="yandex-verification" />
           <meta
             content="t28Kl2fGmZjIEgh6q3mGsf-7gGb8115VMQm1qbMMIKc"
