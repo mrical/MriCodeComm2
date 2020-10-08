@@ -34,5 +34,8 @@
     "swiper": "^6.3.2",
     "tailwindcss": "^1.8.11",
     "yup": "^0.29.3"
+  },
+  "peerOptionalDependencies": {
+    "mongodb": "^3.6.0"
   }
 }

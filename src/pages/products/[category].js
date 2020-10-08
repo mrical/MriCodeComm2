@@ -2,6 +2,7 @@ import useProducts from "../../hooks/useProducts";
 import { useRouter } from "next/router";
 import ProductCard from "../../components/ProductCard";
 import DivideHeading from "../../components/DivideHeading";
+import Head from "next/head";
 export default function index() {
   const router = useRouter();
   const { category } = router.query;
@@ -11,6 +12,13 @@ export default function index() {
   );
   return (
     <>
+      <Head>
+        <title>{category}</title>
+        <meta
+          content={`View All Products of ${category} from MriCode`}
+          name="description"
+        />
+      </Head>
       <DivideHeading title={category} />
       <div className="mx-auto grid p-1 sm:p-3 sm:w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
         {productsOfCategory?.length > 0 &&

@@ -4,7 +4,7 @@ import ProductListByCategory from "../components/ProductList/ProductListByCatego
 import categories from "../helpers/categories";
 import useProducts from "../hooks/useProducts";
 import MuiAlert from "@material-ui/lab/Alert";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Skeleton from "react-loading-skeleton";
 import ProductsLoader from "../components/ProductsLoader";
 import Head from "next/head";
@@ -15,14 +15,6 @@ export default function Home() {
   const { productsState } = useProducts();
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const router = useRouter();
-  useEffect(() => {
-    if (router.query.message) {
-      if (!snackbarOpen) {
-        setSnackbarOpen(true);
-        setTimeout(() => router.push("/", undefined, { shallow: true }), 6000);
-      }
-    }
-  }, [router]);
   const result = (message) => {
     switch (message) {
       case "requestsuccess":
@@ -32,7 +24,7 @@ export default function Home() {
         return { message: "Please try again", type: "error" };
         break;
       case "paymentsuccess":
-        return { message: "Payment successfully done", type: "success" };
+        return { message: "Payment succeeded", type: "success" };
         break;
       case "paymentfailed":
         return { message: "Payment failed", type: "error" };

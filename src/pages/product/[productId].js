@@ -17,9 +17,6 @@ const validationSchema = Yup.object().shape({
 });
 export default function index({ product }) {
   const router = useRouter();
-  if (router.isFallback) {
-    return <div>Loading</div>;
-  }
   const productId = product?._id;
   const { productsState, productsDispatch } = useProducts();
   const { reviewsDispatch } = useReviews();
@@ -100,10 +97,6 @@ export default function index({ product }) {
         <meta content={product.title} property="og:title" />
         <meta content={product.description} property="og:description" />
         <meta content="5e41b2275db646a5" name="yandex-verification" />
-        <meta
-          content="t28Kl2fGmZjIEgh6q3mGsf-7gGb8115VMQm1qbMMIKc"
-          name="google-site-verification"
-        />
         {product.imageUrls[0] && (
           <>
             <meta content={product.imageUrls[0]} property="og:image" />

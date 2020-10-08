@@ -17,7 +17,7 @@ class MyDocument extends Document {
             name="description"
           />
           <meta content="follow, index" name="robots" />
-          <meta content="#FFD22E" name="theme-color" />
+          <meta content="#DC85FF" name="theme-color" />
           <meta content="#ffffff" name="msapplication-TileColor" />
           <meta
             content="/favicons/browserconfig.xml"

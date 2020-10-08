@@ -44,9 +44,7 @@ export default function saved() {
           )}
         </div>
       ) : (
-        <div className="rounded-lg shadow-lg p-2 md:p-4 mb-4 text-center">
-          <LogInBtn />
-        </div>
+        <LogInBtn />
       )}
     </>
   );

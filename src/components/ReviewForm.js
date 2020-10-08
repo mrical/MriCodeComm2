@@ -20,7 +20,10 @@ export default function ReviewForm({
       validationSchema={validationSchema}
     >
       {({ isSubmitting, values, setFieldValue, touched, errors }) => (
-        <Form className="flex flex-col justify-center items-center m-4">
+        <Form
+          className="flex flex-col justify-center items-center m-4"
+          autoComplete="off"
+        >
           <div className="">
             <Field name="rating">
               {({ field }) => (
