@@ -18,7 +18,7 @@ export default async (req, res) => {
 const uploadToCloudinary = async (req, res) => {
   await ensureAdmin(req, res);
   try {
-    console.log(req.body);
+    const fileStr = req.body.data;
     const uploadResponse = await cloudinary.uploader.upload(fileStr, {
       upload_preset: "mricode-ecomm",
     });
