@@ -14,6 +14,7 @@ import { allSizes } from "../helpers/sizes";
 import { Image } from "cloudinary-react";
 SwiperCore.use([Pagination, Navigation, Thumbs]);
 import { CLOUDINARY_REGEX } from "../helpers/cloudinaryRegex";
+import Axios from "axios";
 export default function ProductDetails({
   imageUrls,
   title,
@@ -29,6 +30,13 @@ export default function ProductDetails({
   handleDelete,
   sizes,
 }) {
+  const [newimageUrls, setNewImageUrls] = useState(imageUrls);
+  useEffect(() => {
+    (async () => {
+      const { data } = await Axios.get(`/api/product/${_id}`);
+      setNewImageUrls(data.imageUrls);
+    })();
+  }, [imageUrls, _id]);
   const userId = useAuth().authState?.userDetails?._id;
   const [isSaved, setIsSaved] = useState();
   const [snackbarOpen, setSnackbarOpen] = useState(false);
@@ -81,7 +89,7 @@ export default function ProductDetails({
             thumbs={{ swiper: thumbsSwiper }}
             className="rounded-lg border-2 border-transparent shadow-lg"
           >
-            {imageUrls.map((url, i) => (
+            {newimageUrls.map((url, i) => (
               <SwiperSlide tag="li" key={`Slide-${i}`}>
                 <div>
                   <Image
@@ -105,7 +113,7 @@ export default function ProductDetails({
             slidesPerView={3}
             spaceBetween={3}
           >
-            {imageUrls.map((url, i) => (
+            {newimageUrls.map((url, i) => (
               <SwiperSlide tag="li" key={`Slide-${i}`}>
                 <Image
                   cloudName={process.env.NEXT_PUBLIC_CLOUDINARY_NAME}
