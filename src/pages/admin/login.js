@@ -33,7 +33,7 @@ function LoginPage({ isAdmin }) {
           const res = await Axios.post("/api/adminAuth", {
             loginDetails: values,
           });
-          if (res.error) {
+          if (res.data.error) {
             setLoginError(res.error);
           } else {
             router.push("/admin/dashboard");
