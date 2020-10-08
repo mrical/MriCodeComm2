@@ -12,11 +12,22 @@ import { useRouter } from "next/router";
 import { fetchProductsForPaths } from "../api/products";
 import { fetchProductStatic } from "../api/product/[productId]";
 import Head from "next/head";
+import { CircularProgress } from "@material-ui/core";
 const validationSchema = Yup.object().shape({
   text: Yup.string().required("Please Provide your usefull review"),
 });
 export default function index({ product }) {
   const router = useRouter();
+  if (router.isFallback) {
+    return (
+      <div
+        className="w-screen flex justify-center items-center"
+        style={{ height: "calc(100vh - 143px)" }}
+      >
+        <CircularProgress />
+      </div>
+    );
+  }
   const productId = product?._id;
   const { productsState, productsDispatch } = useProducts();
   const { reviewsDispatch } = useReviews();
@@ -125,7 +136,7 @@ export const getStaticPaths = async () => {
   products.forEach((p) => paths.push({ params: { productId: p?._id } }));
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 };
 export const getStaticProps = async ({ params }) => {
