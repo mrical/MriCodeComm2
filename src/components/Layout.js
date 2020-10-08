@@ -15,11 +15,15 @@ export default function Layout({ children }) {
           <ReviewsProvider>
             <RequestsProvider>
               <BannerProvider>
-                <Header />
-                <div className="flex min-h-screen flex-col justify-between">
-                  <div className="w-11/12 mx-auto sm:w-4/5 lg:w-3/5">
-                    {children}
+                <div className="min-h-screen flex flex-col justify-between">
+                  <div>
+                    <Header />
+
+                    <div className="w-11/12 mx-auto sm:w-4/5 lg:w-3/5">
+                      {children}
+                    </div>
                   </div>
+
                   <Footer />
                 </div>
               </BannerProvider>

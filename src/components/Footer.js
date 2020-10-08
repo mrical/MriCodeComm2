@@ -3,7 +3,7 @@ import Link from "next/link";
 import categories from "../helpers/categories";
 export default function Footer() {
   return (
-    <div className="w-full bg-purple-700 mt-5">
+    <div className="w-full bg-purple-600 mt-5">
       <div className="w-11/12 mx-auto sm:w-5/6 lg:w-3/5 pt-4 pb-4 sm:pt-6 sm:pb-4 flex flex-col">
         <div className="flex justify-between mb-3">
           <div className="px-6">
