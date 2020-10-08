@@ -114,7 +114,10 @@ export default function index({ product }) {
             <meta content={product.title} property="og:image:alt" />
           </>
         )}
-
+        <meta
+          content="t28Kl2fGmZjIEgh6q3mGsf-7gGb8115VMQm1qbMMIKc"
+          name="google-site-verification"
+        />
         <meta content="summary_large_image" name="twitter:card" />
         <meta content="@MricalSinghal" name="twitter:site" />
         <meta content="@MricalSinghal" name="twitter:creator" />
