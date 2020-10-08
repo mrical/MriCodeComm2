@@ -30,7 +30,7 @@ export default function ProductDetails({
   handleDelete,
   sizes,
 }) {
-  const [newimageUrls, setNewImageUrls] = useState(imageUrls);
+  const [newimageUrls, setNewImageUrls] = useState([]);
   useEffect(() => {
     (async () => {
       const { data } = await Axios.get(`/api/product/${_id}`);
