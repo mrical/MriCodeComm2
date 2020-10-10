@@ -16,6 +16,7 @@ const options = {
   ],
   pages: {
     signIn: "/auth/signin",
+    error: "/auth/error",
   },
   // A database is optional, but required to persist accounts in a database
   database: process.env.MONGO_URI,

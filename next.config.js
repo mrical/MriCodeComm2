@@ -11,6 +11,11 @@ module.exports = withPWA({
         destination: "/admin/login",
         permanent: true,
       },
+      {
+        source: "/auth/error",
+        destination: "/",
+        permanent: true,
+      },
     ];
   },
 });
