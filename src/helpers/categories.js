@@ -1,5 +1,5 @@
 const categories = [
-  "T-Shirts",
+  "Sweatshirts",
   "Shirts",
   "Jeans",
   "Joggers",

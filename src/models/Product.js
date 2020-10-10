@@ -32,7 +32,7 @@ export const productSchema = Schema(
     category: {
       type: String,
       enum: [
-        "T-Shirts",
+        "Sweatshirts",
         "Shirts",
         "Jeans",
         "Joggers",
