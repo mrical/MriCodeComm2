@@ -10,7 +10,7 @@ export default function PageLinksIcons({ name, children,active }) {
     <div>
       <div className="flex flex-col justify-center items-center ">
         <div
-          className={`flex items-center justify-center rounded-full w-16 h-16 shadow-xl cursor-pointer sm:hover:bg-indigo-400 focus:outline-none relative ${active && "bg-orange-500"}`}
+          className={`flex items-center justify-center rounded-full w-16 h-16 shadow-xl cursor-pointer sm:hover:bg-indigo-400 focus:outline-none relative ${active && "bg-yellow-400"}`}
         >
           {name.toLowerCase() === "notifications" && userHasNotRead && (
             <span className="flex h-3 w-3 absolute right-0 top-0">
