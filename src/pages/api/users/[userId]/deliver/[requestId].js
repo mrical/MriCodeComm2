@@ -39,7 +39,7 @@ const deliverProduct = async (req, res) => {
       from: process.env.ADMIN_GMAIL,
       to: user.email,
       subject: "Product Delivered",
-      text: `Hey, Thanks for your purchase Hope we see u again on MriCodecom\n Your product is sucessfully delivered to your prefered location`,
+      text: `Hey, Thanks for your purchase Hope we see u again on MriCodecom\n\n Your product is sucessfully delivered to your prefered location`,
     },
     function (err) {
       if (err) {

@@ -42,7 +42,7 @@ const rejectProduct = async (req, res) => {
       from: process.env.ADMIN_GMAIL,
       to: user.email,
       subject: "Product Rejected",
-      text: `Hey, Sorry we are unable to Approve your Request on MriCodecom\n here is the message from MriCodecom : ${rejectDetails.message}`,
+      text: `Hey, Sorry we are unable to Approve your Request on MriCodecom\n\n here is the message from MriCodecom\n${rejectDetails.message}`,
     },
     function (err) {
       if (err) {

@@ -41,8 +41,8 @@ const approveProduct = async (req, res) => {
     {
       from: process.env.ADMIN_GMAIL,
       to: user.email,
-      subject: "Product approval",
-      text: `Hey, Your product is successfull approved on MriCodecom\n here is the message from MriCodecom : ${approveDetails.message}`,
+      subject: "Product approved",
+      text: `Hey, Your product is successfull approved on MriCodecom\n\nhere is the message from MriCodecom\n\n${approveDetails.message}`,
     },
     function (err) {
       if (err) {
