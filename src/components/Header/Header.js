@@ -36,17 +36,20 @@ export default function Header() {
             ? adminIcons.map(({ name, icon, url }, i) => (
                 <Link href={url} key={`icon-${i}`}>
                   <a>
-                    <PageLinksIcons name={name}>{icon}</PageLinksIcons>
+                    <PageLinksIcons active={pathName===url} name={name}>{icon}</PageLinksIcons>
                   </a>
                 </Link>
               ))
-            : icons.map(({ name, icon, url }, i) => (
+            : icons.map(({ name, icon, url }, i) => {
+                console.log("url",url)
+                console.log("pathName",pathName)
+              return(
                 <Link href={url} key={`icon-${i}`}>
                   <a>
-                    <PageLinksIcons name={name}>{icon}</PageLinksIcons>
+                    <PageLinksIcons active={pathName===url} name={name}>{icon}</PageLinksIcons>
                   </a>
                 </Link>
-              ))}
+              )})}
         </div>
         {pathName === "/" && <Banner bannerUrl={bannerUrl} />}
       </div>
