@@ -13,8 +13,8 @@ export const icons = [
     ),
   },
   {
-    name: "Notifications",
-    url: "/notifications",
+    name: "Requests",
+    url: "/requests",
     icon: (
       <svg
         className="w-10 h-10"
@@ -27,8 +27,8 @@ export const icons = [
     ),
   },
   {
-    name: "Saved",
-    url: "/saved",
+    name: "Wishlist",
+    url: "/wishlist",
     icon: (
       <svg
         className="w-10 h-10"

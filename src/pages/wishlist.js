@@ -24,9 +24,9 @@ export default function saved() {
   return (
     <>
       <Head>
-        <title>Saved|MriCodecomm</title>
+        <title>Wishlist | MriCodecomm</title>
       </Head>
-      <DivideHeading title="Saved" />
+      <DivideHeading title="Wishlist" />
       {isSignedIn ? (
         <div className="mx-auto grid p-1 sm:p-3 sm:w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
           {savedProducts?.length > 0 ? (

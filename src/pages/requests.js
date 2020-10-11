@@ -16,9 +16,9 @@ export default function notifications() {
   return (
     <>
       <Head>
-        <title>Notification|MriCodecomm</title>
+        <title>Requests|MriCodecomm</title>
       </Head>
-      <DivideHeading title="Notifications" />
+      <DivideHeading title="Requests" />
       {isSignedIn ? (
         <div className="mt-4">
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 p-3">

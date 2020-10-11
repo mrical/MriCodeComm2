@@ -34,7 +34,7 @@
       "name": "Admin",
       "short_name": "MriCode",
       "description": "Ecomm web app developed by MriCode",
-      "url": "/admin",
+      "url": "/admin/login",
       "icons": [
         { "src": "/favicons/android-chrome-192x192.png", "sizes": "192x192" }
       ]

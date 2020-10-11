@@ -20,8 +20,8 @@ export default function Header() {
           className="grid grid-cols-4 gap-3 my-4 pb-3"
           style={{
             borderBottomWidth: `${
-              pathName === "/saved" ||
-              pathName === "/notifications" ||
+              pathName === "/wishlist" ||
+              pathName === "/requests" ||
               pathName === "/address" ||
               pathName === "/offers" ||
               pathName === "/about" ||
@@ -40,16 +40,13 @@ export default function Header() {
                   </a>
                 </Link>
               ))
-            : icons.map(({ name, icon, url }, i) => {
-                console.log("url",url)
-                console.log("pathName",pathName)
-              return(
+            : icons.map(({ name, icon, url }, i) => (
                 <Link href={url} key={`icon-${i}`}>
                   <a>
                     <PageLinksIcons active={pathName===url} name={name}>{icon}</PageLinksIcons>
                   </a>
                 </Link>
-              )})}
+              ))}
         </div>
         {pathName === "/" && <Banner bannerUrl={bannerUrl} />}
       </div>
