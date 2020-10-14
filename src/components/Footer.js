@@ -20,8 +20,8 @@ export default function Footer() {
               Categories
             </h1>
             <div className="grid grid-cols-2 gap-x-3 sm:gap-x-6 gap-y-1">
-              {categories.map((c) => (
-                <Link href={`/products/${c}`}>
+              {categories.map((c,i) => (
+                <Link href={`/products/${c}`} key={i}>
                   <a className="text-sm sm:text-lg hover:text-white sm:m-1 font-medium sm:font-semibold tracking-tight sm:tracking-normal">
                     {c}
                   </a>
