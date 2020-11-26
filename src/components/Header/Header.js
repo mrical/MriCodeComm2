@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "./Navbar";
 import Link from "next/link";
 import PageLinksIcons from "../PageLinksIcons";
@@ -6,10 +6,16 @@ import { icons, adminIcons } from "../../helpers/linkIcons";
 import { useRouter } from "next/router";
 import Banner from "../Banner";
 import useBanner from "../../hooks/useBanner";
+import tawkTo from "tawkto-react";
 export default function Header() {
   const router = useRouter();
   const pathName = router.pathname.toLowerCase();
   const bannerUrl = useBanner().bannerState?.bannerUrl;
+  const tawkToPropertyId = "5fbeebf1920fc91564cab9b4";
+
+  useEffect(() => {
+    tawkTo(tawkToPropertyId);
+  }, []);
   return (
     <div>
       <div style={{ height: "50px" }}>
@@ -36,14 +42,18 @@ export default function Header() {
             ? adminIcons.map(({ name, icon, url }, i) => (
                 <Link href={url} key={`icon-${i}`}>
                   <a>
-                    <PageLinksIcons active={pathName===url} name={name}>{icon}</PageLinksIcons>
+                    <PageLinksIcons active={pathName === url} name={name}>
+                      {icon}
+                    </PageLinksIcons>
                   </a>
                 </Link>
               ))
             : icons.map(({ name, icon, url }, i) => (
                 <Link href={url} key={`icon-${i}`}>
                   <a>
-                    <PageLinksIcons active={pathName===url} name={name}>{icon}</PageLinksIcons>
+                    <PageLinksIcons active={pathName === url} name={name}>
+                      {icon}
+                    </PageLinksIcons>
                   </a>
                 </Link>
               ))}
